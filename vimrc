@@ -1,4 +1,3 @@
-" Test Test
 " source current vimrc file by `:so %`
 " install plug-ins by `:PlugInstall`
 " Plug-ins Management using the vim-plug manager
