@@ -51,4 +51,5 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 "============================================================================="
 let g:airline_theme='badwolf'
 colorscheme gruvbox     " awesome colorscheme
+set background=dark
 syntax enable            " enable syntax processing
