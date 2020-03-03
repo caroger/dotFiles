@@ -9,7 +9,7 @@ This fold stores the configuration files for VS Code and Vim for the ease of usi
 ```bash
 cd ~
 git clone 
-```
+```chmod +x install-source-code-pro.sh
 
 
 
