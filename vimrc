@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'                                                
 Plug 'tell-k/vim-autopep8'			"Autopep8
+Plug 'tpope/vim-surround'           "Auto surronding
 call plug#end()
 
 
@@ -49,7 +50,7 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 "Colors"
 "============================================================================="
-let g:airline_theme='badwolf'
 colorscheme gruvbox     " awesome colorscheme
+let g:airline_theme='badwolf'
 set background=dark
 syntax enable            " enable syntax processing
