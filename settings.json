@@ -5,7 +5,6 @@
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "python.pythonPath": "/home/roger/anaconda3/envs/proj_2/bin/python",
     "editor.fontSize": 14,
     "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "normal",
