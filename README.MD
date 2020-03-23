@@ -42,4 +42,8 @@ mkdir ~/.vim/plugged
 ln -s ~/dotFiles/vimrc ~/.vim/vimrc
 ```
 
-
+```
+vim vimrc
+:PlugInstall
+so %
+```
