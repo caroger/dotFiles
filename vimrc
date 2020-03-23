@@ -5,13 +5,17 @@
 "============================================================================="
 call plug#begin('~/.vim/plugged')
 
-Plug 'flazz/vim-colorschemes'                   " collection of color schemes 
+Plug 'gruvbox-community/gruvbox'                " Grve box theme
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'                                                
 Plug 'tell-k/vim-autopep8'			"Autopep8
 Plug 'tpope/vim-surround'           "Auto surronding
+" For markdowns
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
 
@@ -50,7 +54,24 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 "Colors"
 "============================================================================="
+"" For Gruvbox to look correct in terminal Vim you'll want to source a palette
+" script that comes with the Gruvbox plugin.
+"
+" Add this to your ~/.profile file:
+"   source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
+
 colorscheme gruvbox     " awesome colorscheme
 let g:airline_theme='badwolf'
 set background=dark
+" Gruvbox has 'hard', 'medium' (default) and 'soft' contrast options.
+let g:gruvbox_contrast_light='soft'
 syntax enable            " enable syntax processing
+
+"Plugin Config"
+"============================================================================="
+"Markdown Preview
+
+
+
+let g:mkdp_markdown_css='/home/roger/.local/github-markdown.css'
+

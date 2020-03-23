@@ -6,43 +6,43 @@ This fold stores the configuration files for VS Code and Vim for the ease of usi
 
 ## Download Repo
 
-```bash
+```sh
 cd ~
 git clone 
 ```
 
 ## Install Source Code Pro Font
 
-```bash
+```sh
 chmod +x install-source-code-pro.sh
 ```
 
-```bash
+```sh
 ./install-source-code-pro.sh
 ```
 
 ## VS Code User Config
 
-```bash
+```sh
 ln -s ~/dotFiles/settings.json ~/.config/Code/User/settings.json
 ```
 
 ## Vim
 
-```bash
+```sh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-```bash
+```sh
 mkdir ~/.vim/plugged
 ```
 
-```bash
+```sh
 ln -s ~/dotFiles/vimrc ~/.vim/vimrc
 ```
 
-```
+```sh
 vim vimrc
 :PlugInstall
 so %
