@@ -4,7 +4,10 @@
 "============================================================================="
 call plug#begin('~/.vim/plugged')
 
-Plug 'gruvbox-community/gruvbox'                " Grve box theme
+Plug 'morhetz/gruvbox'                " Gruve box theme
+Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'tomasr/molokai'
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
 Plug 'vim-airline/vim-airline'
@@ -28,7 +31,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
-
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 call glaive#Install()
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
@@ -67,8 +70,8 @@ map <F2> :NERDTreeToggle<CR>
 nnoremap <leader><space> :nohlsearch<CR>        
 
 " F5 is save file and run python script
-autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <F5> :w<CR>:exec '!clear && python' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!clear && python' shellescape(@%, 1)<CR>
 "Colors"
 "============================================================================="
 syntax enable            " enable syntax processing
@@ -76,7 +79,7 @@ syntax enable            " enable syntax processing
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='dark'
+let g:airline_theme='molokai'
 
 " Goyo and Limelight integration
 autocmd! User GoyoEnter Limelight
@@ -116,6 +119,10 @@ augroup autoformat_settings
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
-colorscheme gruvbox     " awesome colorscheme
-set background=dark
-hi Normal guibg=NONE ctermbg=NONE
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:onedark_termcolors = 256
+" let g:onedark_terminal_italics = 1
+" let g:rehash256 = 1
+colorscheme molokai     " awesome colorscheme
+" set background=dark
+" hi Normal guibg=NONE ctermbg=NONE
