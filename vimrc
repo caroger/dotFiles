@@ -38,7 +38,7 @@ set softtabstop=4        " number of spaces in tab when editing
 set shiftwidth=4
 
 "UI Config"
-set nu rnu                 " show relative line number
+set nu rnu              " show relative line number
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
@@ -87,7 +87,6 @@ let g:vim_markdown_folding_disabled = 1
 let g:mkdp_refresh_slow = 1
 
 " google code formatter
-
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
