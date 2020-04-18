@@ -47,3 +47,8 @@ vim vimrc
 :PlugInstall
 so %
 ```
+## ZSH
+create a link
+```sh
+ln -s ~/dotFiles/zshrc ~/.zshrc
+```
