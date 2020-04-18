@@ -18,9 +18,12 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+
 " For writing
 Plug 'junegunn/goyo.vim'            "zen mode with :Goyo
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "Code formatting
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
@@ -69,8 +72,6 @@ autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescap
 "Colors"
 "============================================================================="
 syntax enable            " enable syntax processing
-colorscheme gruvbox     " awesome colorscheme
-set background=dark
 "Status bar"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -114,3 +115,7 @@ augroup autoformat_settings
   autocmd FileType rust AutoFormatBuffer rustfmt
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
+
+colorscheme gruvbox     " awesome colorscheme
+set background=dark
+hi Normal guibg=NONE ctermbg=NONE
