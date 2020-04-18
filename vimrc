@@ -11,14 +11,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'                                                
 Plug 'tpope/vim-surround'           "Auto surronding
 Plug 'tpope/vim-fugitive'           "Git
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'         "Commenting line with gcc
 Plug 'preservim/nerdtree'
 " For markdowns
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
-" Code formatting
+" For writing
+Plug 'junegunn/goyo.vim'            "zen mode with :Goyo
+Plug 'junegunn/limelight.vim'
+"Code formatting
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
@@ -68,11 +71,22 @@ autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescap
 syntax enable            " enable syntax processing
 colorscheme gruvbox     " awesome colorscheme
 set background=dark
-
+"Status bar"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='dark'
+
+" Goyo and Limelight integration
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 100
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = '#83a598'
+
+
 "Plugin Config"
 "============================================================================="
 "Markdown
