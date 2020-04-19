@@ -75,6 +75,16 @@ autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!clear && python' s
 "Colors"
 "============================================================================="
 syntax enable            " enable syntax processing
+set nocompatible
+filetype on
+"Swap and temp file directory
+"============================================================================="
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+"Plugin Config"
+"============================================================================="
 "Status bar"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -89,10 +99,6 @@ autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 100
 " Color name (:help gui-colors) or RGB color
 let g:limelight_conceal_guifg = '#83a598'
-
-
-"Plugin Config"
-"============================================================================="
 "Markdown
 let g:vim_markdown_folding_disabled = 1
 
@@ -119,6 +125,7 @@ augroup autoformat_settings
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
+" custom themes"
 " let g:gruvbox_contrast_dark = 'hard'
 " let g:onedark_termcolors = 256
 " let g:onedark_terminal_italics = 1
