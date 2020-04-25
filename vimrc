@@ -16,11 +16,12 @@ Plug 'tpope/vim-surround'           "Auto surronding
 Plug 'tpope/vim-fugitive'           "Git
 Plug 'tpope/vim-commentary'         "Commenting line with gcc
 Plug 'preservim/nerdtree'
+Plug 'ervandew/supertab'
 " For markdowns
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-
+Plug 'junegunn/vim-easy-align'
 
 " For writing
 Plug 'junegunn/goyo.vim'            "zen mode with :Goyo
@@ -89,7 +90,7 @@ set undodir=/tmp//
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='molokai'
+let g:airline_theme='badwolf'
 
 " Goyo and Limelight integration
 autocmd! User GoyoEnter Limelight
@@ -108,7 +109,10 @@ let g:vim_markdown_folding_disabled = 1
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
 " move the cursor
 " default: 0
-let g:mkdp_refresh_slow = 1
+let g:mkdp_refresh_slow = 0
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " google code formatter
 augroup autoformat_settings
@@ -125,11 +129,15 @@ augroup autoformat_settings
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
+"Jedi"
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures_delay = 200
+autocmd FileType python setlocal completeopt-=preview
 " custom themes"
-" let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'medium'
 " let g:onedark_termcolors = 256
 " let g:onedark_terminal_italics = 1
 " let g:rehash256 = 1
-colorscheme molokai     " awesome colorscheme
-" set background=dark
+colorscheme gruvbox     " awesome colorscheme
+set background=dark
 " hi Normal guibg=NONE ctermbg=NONE
