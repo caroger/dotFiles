@@ -8,6 +8,8 @@ Plug 'morhetz/gruvbox'                " Gruve box theme
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
+Plug 'ayu-theme/ayu-vim'
+
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
 Plug 'vim-airline/vim-airline'
@@ -92,7 +94,7 @@ set undodir=/tmp//
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='gruvbox'
+" let g:airline_theme='gruvbox'
 
 " Goyo and Limelight integration
 autocmd! User GoyoEnter Limelight
@@ -134,10 +136,20 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures_delay = 200
 autocmd FileType python setlocal completeopt-=preview
 " custom themes"
-let g:gruvbox_contrast_dark = 'medium'
-" let g:onedark_termcolors = 256
-" let g:onedark_terminal_italics = 1
-" let g:rehash256 = 1
-colorscheme gruvbox     " awesome colorscheme
-set background=dark
+
+set termguicolors     " enable true colors support
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+" let g:gruvbox_contrast_dark = 'medium'
+" " let g:onedark_termcolors = 256
+" " let g:onedark_terminal_italics = 1
+" " let g:rehash256 = 1
+" colorscheme gruvbox     " awesome colorscheme
+" set background=dark
 " hi Normal guibg=NONE ctermbg=NONE
+"
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"

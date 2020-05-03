@@ -116,7 +116,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vim/vimrc"
 alias lc='colorls -lA --sd'
-
+alias mitbbs='luit -encoding gbk telnet mitbbs.com'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
