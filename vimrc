@@ -20,8 +20,8 @@ Plug 'ervandew/supertab'
 " For markdowns
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/vim-easy-align'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " For writing
 Plug 'junegunn/goyo.vim'            "zen mode with :Goyo
@@ -32,7 +32,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'fisadev/vim-isort'
 Plug 'davidhalter/jedi-vim'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 call glaive#Install()
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
@@ -90,7 +92,7 @@ set undodir=/tmp//
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='badwolf'
+let g:airline_theme='gruvbox'
 
 " Goyo and Limelight integration
 autocmd! User GoyoEnter Limelight
@@ -102,17 +104,13 @@ let g:limelight_conceal_ctermfg = 100
 let g:limelight_conceal_guifg = '#83a598'
 "Markdown
 let g:vim_markdown_folding_disabled = 1
-
-"Markdown Preview
-
-" set to 1, the vim will refresh markdown when save the buffer or
-" leave from insert mode, default 0 is auto refresh markdown as you edit or
-" move the cursor
-" default: 0
-let g:mkdp_refresh_slow = 0
+let g:instant_markdown_browser = "/usr/bin/chromium-browser --new-window"
 
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" supertab config
+let g:SuperTabDefaultCompletionType = "context"
 
 " google code formatter
 augroup autoformat_settings
@@ -128,7 +126,9 @@ augroup autoformat_settings
   autocmd FileType rust AutoFormatBuffer rustfmt
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
-
+"iSort
+let g:vim_isort_python_version = 'python3'
+let g:vim_isort_map = '<C-i>'
 "Jedi"
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures_delay = 200
