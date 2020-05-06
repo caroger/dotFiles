@@ -88,7 +88,7 @@ plugins=(
     fzf)
 source $ZSH/oh-my-zsh.sh
 
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -120,12 +120,7 @@ alias mitbbs='luit -encoding gbk telnet mitbbs.com'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Custom keybindings
 
-bindkey -v
-bindkey ';' autosuggest-accept
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -144,4 +139,7 @@ unset __conda_setup
 
 # Auto-suggest color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold"
+# Custom keybindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey ';' autosuggest-accept
 
