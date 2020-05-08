@@ -5,22 +5,26 @@
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 12.5,
     "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "normal",
-    "debug.console.fontFamily": "Source Code Pro",
+    "debug.console.fontFamily": "Hack Nerd Font Mono",
     "debug.console.fontSize": 14,
-    "terminal.integrated.fontFamily": "Source Code Pro",
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.integrated.fontWeight": "600",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",
     },
     "window.zoomLevel": 0.5,
     "editor.formatOnSave": true,
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
         "--line-length",
         "80"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--enable=W0614"
     ],
     "terminal.integrated.inheritEnv": true,
     "editor.wordWrap": "bounded",
@@ -28,7 +32,6 @@
     "editor.rulers": [
         80
     ],
-    "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#00BCD4",
         "activityBar.activeBorder": "#00BCD4",
@@ -55,6 +58,14 @@
     },
     "materialTheme.accent": "Cyan",
     "editor.multiCursorModifier": "ctrlCmd",
+    "keyboard.dispatch": "keyCode",
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.parameterHints.enabled": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -65,5 +76,34 @@
                 "<Esc>"
             ]
         }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "python.linting.mypyArgs": [
+        "--follow-imports=silent",
+        "--show-column-numbers"
     ],
 }
