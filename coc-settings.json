@@ -3,7 +3,7 @@
     "default": true,
     "line_length": false
   },
-  "python.jediPath": "/usr/local/lib/python3.8/dist-packages",
+//  "python.jediPath": "/usr/local/lib/python3.8/dist-packages",
   "python.jediEnabled": false,
   "python.linting.lintOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": [
