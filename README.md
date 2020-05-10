@@ -8,7 +8,7 @@ This fold stores the configuration files for VS Code and Vim for the ease of usi
 
 ```sh
 cd ~
-git clone 
+git clone
 ```
 
 ## Install Source Code Pro Font
@@ -47,8 +47,24 @@ vim vimrc
 :PlugInstall
 so %
 ```
+
+## NeoVim
+
+```sh
+mkdir ~/.config/nvim
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+ln -s ~/dotFiles/init.vim ~/.config/nvim/init.vim
+
+ln -s ~/dotFiles/coc-settings.json ~/.config/nvim/coc-settings.json
+```
+
 ## ZSH
+
 create a link
+
 ```sh
 ln -s ~/dotFiles/zshrc ~/.zshrc
 ```

@@ -2,15 +2,12 @@
 " Plug-ins Management using the vim-plug manager
 " plug-ins are saved here '~/.vim/plugged'
 "============================================================================="
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 "ColorSchemes
-Plug 'morhetz/gruvbox'                " Gruve box theme
-Plug 'arcticicestudio/nord-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'tomasr/molokai'
-Plug 'ayu-theme/ayu-vim'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'norcalli/nvim-colorizer.lua'
+
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
 Plug 'vim-airline/vim-airline'
@@ -87,7 +84,6 @@ set undodir=/tmp//
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-" let g:airline_theme='palenight'
 
 " let airline#extensions#coc#error_symbol = 'Error:'
 " Change warning symbol:
@@ -113,12 +109,23 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " colorscheme
 set termguicolors     " enable true colors support
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-let ayucolor="dark"   " for dark version of theme
 set background=dark
-colorscheme ayu
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 1,
+  \     }
+  \   },
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     },
+  \   }
+  \ }
+colorscheme PaperColor
 
+" Show Color
+lua require'colorizer'.setup()
 
 "COC Config=================================================================
 
@@ -271,4 +278,3 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " <leader>f to format buffer
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-

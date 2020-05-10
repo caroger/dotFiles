@@ -1,0 +1,16 @@
+{
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
+  },
+  "python.jediPath": "/usr/local/lib/python3.8/dist-packages",
+  "python.jediEnabled": false,
+  "python.linting.lintOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "python",
+    "python3",
+    "json"
+  ]
+}

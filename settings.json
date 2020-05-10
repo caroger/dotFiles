@@ -5,7 +5,7 @@
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "editor.fontSize": 12.5,
+    "editor.fontSize": 14,
     "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "normal",
     "debug.console.fontFamily": "Hack Nerd Font Mono",
@@ -15,7 +15,7 @@
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",
     },
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 1,
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
@@ -29,9 +29,6 @@
     "terminal.integrated.inheritEnv": true,
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
-    "editor.rulers": [
-        80
-    ],
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#00BCD4",
         "activityBar.activeBorder": "#00BCD4",
@@ -106,4 +103,8 @@
         "--follow-imports=silent",
         "--show-column-numbers"
     ],
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.codeLens": false,
+    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "python.jediEnabled": false,
 }
