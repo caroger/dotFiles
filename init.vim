@@ -8,6 +8,7 @@ call plug#begin()
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'norcalli/nvim-colorizer.lua'
 
+Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
 Plug 'vim-airline/vim-airline'
@@ -109,6 +110,7 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " colorscheme
 set termguicolors     " enable true colors support
+set t_Co=256
 set background=dark
 let g:PaperColor_Theme_Options = {
   \   'theme': {
@@ -124,7 +126,7 @@ let g:PaperColor_Theme_Options = {
   \ }
 colorscheme PaperColor
 
-" Show Color
+" Show Color code
 lua require'colorizer'.setup()
 
 "COC Config=================================================================
@@ -252,7 +254,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
