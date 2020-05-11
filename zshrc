@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -112,11 +112,11 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim  ~/.oh-my-zsh"
-alias vimconfig="vim ~/.vim/vimrc"
-alias lc='colorls -lA --sd'
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias vimconfig="$EDITOR ~/.config/nvim/init.vim"
 alias mitbbs='luit -encoding gbk telnet mitbbs.com'
+alias vi="nvim"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
