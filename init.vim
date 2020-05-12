@@ -17,7 +17,9 @@ Plug 'tpope/vim-surround'           "Auto surronding
 Plug 'tpope/vim-fugitive'           "Git
 Plug 'tpope/vim-commentary'         "Commenting line with gcc
 Plug 'preservim/nerdtree'
-
+Plug 'kien/ctrlp.vim'
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 
 " For markdowns
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -128,6 +130,21 @@ colorscheme PaperColor
 
 " Show Color code
 lua require'colorizer'.setup()
+
+
+"CtrlP Config =============================================================
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+	\ 'file': '\v\.(exe|so|dll)$',
+	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+	\ }
+" devicons config=========================================================
+set encoding=UTF-8
+let g:webdevicons_enable_ctrlp = 1
 
 "COC Config=================================================================
 
