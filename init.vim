@@ -11,15 +11,14 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'                     " Inser to delete brackets,
                                                 " parens, quotes in pair
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-surround'           "Auto surronding
 Plug 'tpope/vim-fugitive'           "Git
 Plug 'tpope/vim-commentary'         "Commenting line with gcc
 Plug 'preservim/nerdtree'
-Plug 'kien/ctrlp.vim'
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 
+let g:rainbow_active = 1
 " For markdowns
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -83,16 +82,21 @@ set undodir=/tmp//
 
 "Plugin Config"
 "============================================================================="
-"Status bar"
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
 
-" let airline#extensions#coc#error_symbol = 'Error:'
-" Change warning symbol:
-" let airline#extensions#coc#warning_symbol = 'Warning:'
-" Change error format:
-" let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
 
 " Goyo and Limelight integration
 autocmd! User GoyoEnter Limelight
@@ -103,7 +107,7 @@ let g:limelight_conceal_ctermfg = 100
 " Color name (:help gui-colors) or RGB color
 let g:limelight_conceal_guifg = '#83a598'
 "Markdown
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled = 0
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_browser = "firefox --new-window"
 
@@ -131,17 +135,6 @@ colorscheme PaperColor
 " Show Color code
 lua require'colorizer'.setup()
 
-
-"CtrlP Config =============================================================
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-	\ 'file': '\v\.(exe|so|dll)$',
-	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-	\ }
 " devicons config=========================================================
 set encoding=UTF-8
 let g:webdevicons_enable_ctrlp = 1
@@ -149,9 +142,6 @@ let g:webdevicons_enable_ctrlp = 1
 "COC Config=================================================================
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
-
-" TextEdit might fail if hidden is not set.
-set hidden
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -182,7 +172,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+  return !col || getline['.'](col - 1)  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
@@ -297,3 +287,31 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " <leader>f to format buffer
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+" FZF key bindings
+nnoremap <C-f> :FZF<CR>
+nnoremap <C-b> :Buffers<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-i': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Buffer line shortcuts
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+set noshowmode
