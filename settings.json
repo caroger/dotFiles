@@ -6,22 +6,17 @@
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
     "editor.fontSize": 14,
-    "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "Ubuntu Mono",
     "editor.fontWeight": "normal",
     "debug.console.fontFamily": "Hack Nerd Font Mono",
-    "debug.console.fontSize": 14,
+    "debug.console.fontSize": 12,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.integrated.fontWeight": "600",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",
     },
-    "window.zoomLevel": 1,
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "80"
-    ],
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
         "--enable=W0614"
@@ -105,6 +100,19 @@
     ],
     "C_Cpp.updateChannel": "Insiders",
     "editor.codeLens": false,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
     "python.jediEnabled": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "workbench.colorTheme": "Predawn",
+    "r.bracketedPaste": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "flake8",
+    "python.linting.flake8Args": [
+        "--ignore=E203",
+        "--ignore=E266",
+        "--ignore=E501",
+        "--ignore=W503",
+        "--max-line-length=88",
+        "--select = B,C,E,F,W,T4,B9",
+        "--max-complexity = 18"
+    ],
 }

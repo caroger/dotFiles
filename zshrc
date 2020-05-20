@@ -137,9 +137,19 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Custom keybindings
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+export KEYTIMEOUT=1
 # Auto-suggest color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold"
-# Custom keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-bindkey ';' autosuggest-accept
-

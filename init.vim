@@ -18,13 +18,13 @@ Plug 'tpope/vim-fugitive'           "Git
 Plug 'tpope/vim-commentary'         "Commenting line with gcc
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1
 " For markdowns
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'junegunn/vim-easy-align'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-
+Plug 'jkramer/vim-checkbox' 
 " For writing
 Plug 'junegunn/goyo.vim'            "zen mode with :Goyo
 Plug 'junegunn/limelight.vim'
@@ -107,9 +107,12 @@ let g:limelight_conceal_ctermfg = 100
 " Color name (:help gui-colors) or RGB color
 let g:limelight_conceal_guifg = '#83a598'
 "Markdown
-let g:vim_markdown_folding_disabled = 0
+let g:vim_markdown_folding_disabled = 1
 let g:instant_markdown_autostart = 0
+let g:instant_markdown_mathjax = 1
 let g:instant_markdown_browser = "firefox --new-window"
+let g:vim_markdown_math = 1
+
 
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
@@ -315,3 +318,42 @@ let g:fzf_colors =
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 set noshowmode
+
+" open ~/Documents/notes/index.md
+nnoremap <Leader>ww :e ~/Documents/notes/index.md<cr>
+
+"rainbow config
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\	'operators': '_,_',
+\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\	'separately': {
+\		'*': {},
+\		'tex': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\		},
+\		'lisp': {
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\		},
+\		'vim': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\		},
+\		'html': {
+\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\		},
+\		'css': 0,
+\	}
+\}
+
+let g:instant_markdown_browser = "chromium --app=%s"
+
+" This gets rid of the nasty _ italic bug in tpope's vim-markdown
+" block $$...$$
+syn region math start=/\$\$/ end=/\$\$/
+" inline math
+syn match math '\$[^$].\{-}\$'
+
+" actually highlight the region we defined as "math"
+hi link math Statement
