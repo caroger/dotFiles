@@ -1,98 +1,9 @@
 {
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": [
-    "--ignore=E203",
-    "--ignore=E266",
-    "--ignore=E501",
-    "--ignore=W503",
-    "--max-line-length=88",
-    "--select = B,C,E,F,W,T4,B9",
-    "--max-complexity = 18"
-  ],
-
-  "markdownlint.config": {
-    "default": true,
-    "line_length": false
-  },
-  //  "python.jediPath": "/usr/local/lib/python3.8/dist-packages",
-  "python.jediEnabled": false,
-  "python.linting.lintOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
     "python",
-    "python3",
-    "html",
     "json"
   ],
-
-  //-------- Code Spell Checker Configuration --------
-  // The Language local to use when spell checking. "en" and "en-GB" are currently supported.
-  "cSpell.language": "en",
-
-  // Controls the maximum number of spelling errors per document.
-  "cSpell.maxNumberOfProblems": 100,
-
-  // Controls the number of suggestions shown.
-  "cSpell.numSuggestions": 8,
-
-  // The minimum length of a word before checking it against a dictionary.
-  "cSpell.minWordLength": 4,
-
-  // Specify file types to spell check.
-  "cSpell.enabledLanguageIds": [
-    //    "csharp",
-    //    "go",
-    //    "javascript",
-    //    "javascriptreact",
-    "markdown",
-    //    "php",
-    "plaintext"
-    //    "py",
-    //    "typescript",
-    //   "typescriptreact",
-    //    "yml"
-  ],
-
-  // Enable / Disable the spell checker.
-  "cSpell.enabled": true,
-
-  // Display the spell checker status on the status bar.
-  "cSpell.showStatus": true,
-
-  // Words to add to dictionary for a workspace.
-  "cSpell.words": [],
-
-  // Enable / Disable compound words like 'errormessage'
-  "cSpell.allowCompoundWords": false,
-
-  // Words to be ignored and not suggested.
-  "cSpell.ignoreWords": ["behaviour"],
-
-  // User words to add to dictionary.  Should only be in the user settings.
-  "cSpell.userWords": [
-    "Tfidf",
-    "Vectorizer"
-  ],
-
-  // Specify paths/files to ignore.
-  "cSpell.ignorePaths": [
-    "node_modules", // this will ignore anything the node_modules directory
-    "**/node_modules", // the same for this one
-    "**/node_modules/**", // the same for this one
-    "node_modules/**", // Doesn't currently work due to how the current working directory is determined.
-    "vscode-extension", //
-    ".git", // Ignore the .git directory
-    "*.dll", // Ignore all .dll files.
-    "**/*.dll" // Ignore all .dll files
-  ],
-
-  // flagWords - list of words to be always considered incorrect
-  // This is useful for offensive words and common spelling errors.
-  // For example "hte" should be "the"`
-  "cSpell.flagWords": ["hte"],
-
-  // Set the delay before spell checking the document. Default is 50.
-  "cSpell.spellCheckDelayMs": 50
+  "coc.preferences.formatOnType": true
 }
