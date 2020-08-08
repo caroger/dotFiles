@@ -1,5 +1,4 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
     "git.autofetch": true,
     "code-runner.clearPreviousOutput": true,
     "workbench.settings.editor": "json",
@@ -8,19 +7,15 @@
     "editor.fontSize": 14,
     "editor.fontFamily": "Ubuntu Mono",
     "editor.fontWeight": "normal",
-    "debug.console.fontFamily": "Hack Nerd Font Mono",
+    "debug.console.fontFamily": "Hack",
     "debug.console.fontSize": 12,
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontWeight": "600",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",
     },
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--enable=W0614"
-    ],
     "terminal.integrated.inheritEnv": true,
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
@@ -52,7 +47,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "keyboard.dispatch": "keyCode",
     "editor.suggestOnTriggerCharacters": true,
-    "editor.parameterHints.enabled": true,
+    "editor.parameterHints.enabled": false,
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -102,7 +97,6 @@
     "editor.codeLens": false,
     "python.jediEnabled": false,
     "editor.acceptSuggestionOnEnter": "off",
-    "workbench.colorTheme": "Predawn",
     "r.bracketedPaste": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "flake8",
@@ -115,4 +109,8 @@
         "--select = B,C,E,F,W,T4,B9",
         "--max-complexity = 18"
     ],
+    "python.languageServer": "Microsoft",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "window.zoomLevel": 1.2,
+    "workbench.colorTheme": "Monokai",
 }
