@@ -14,6 +14,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
+set timeoutlen=1000 ttimeoutlen=0
 
 au BufNewFile,BufRead *.py
     \ set expandtab       |" replace tabs with spaces
