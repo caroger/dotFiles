@@ -4,48 +4,10 @@ This fold stores the configuration files for VS Code and Vim for the ease of usi
 
 ---
 
-## Download Repo
-
-```sh
-cd ~
-git clone
-```
-
-## Install Source Code Pro Font
-
-```sh
-chmod +x install-source-code-pro.sh
-```
-
-```sh
-./install-source-code-pro.sh
-```
-
-## VS Code User Config
+## VS Code User Configg
 
 ```sh
 ln -s ~/dotFiles/settings.json ~/.config/Code/User/settings.json
-```
-
-## Vim
-
-```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-```sh
-mkdir ~/.vim/plugged
-```
-
-```sh
-ln -s ~/dotFiles/vimrc ~/.vim/vimrc
-```
-
-```sh
-vim vimrc
-:PlugInstall
-so %
 ```
 
 ## NeoVim
@@ -63,8 +25,12 @@ ln -s ~/dotFiles/coc-settings.json ~/.config/nvim/coc-settings.json
 
 ## ZSH
 
-create a link
-
 ```sh
-ln -s ~/dotFiles/zshrc ~/.zshrc
+sudo apt install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd ~/.oh-my-zsh/custom/plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions
+ln -s ~/dotFiles/.zshrc ~/.zshrc
 ```
