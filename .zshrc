@@ -69,7 +69,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages vi-mode fzf zsh_reload)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages vi-mode fzf zsh_reload postgres)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +99,19 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias lc='colorls -l --sd'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/roger/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/roger/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/roger/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/roger/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

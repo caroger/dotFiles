@@ -23,5 +23,6 @@ tags
 # Coc configuration directory
 .vim
 
+.ipynb_checkpoints
 
-
+**/*.ipynb_checkpoints/
