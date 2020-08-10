@@ -1,9 +1,26 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "markdown",
-    "python",
-    "json"
-  ],
-  "coc.preferences.formatOnType": true
+        "coc.preferences.formatOnSaveFiletypes": [
+                "css",
+                "markdown",
+                "python",
+                "json"
+        ],
+        "coc.preferences.formatOnType": true,
+        "python.autoComplete.addBrackets": true,
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "/home/roger/.local/bin/black",
+        "python.linting.enabled": true,
+        "python.linting.flake8Path": "/home/roger/.local/bin/flake8",
+        "python.linting.flake8Enabled": true,
+        "python.linting.flake8Args": [
+                "--ignore=E203",
+                "--ignore=E266",
+                "--ignore=E501",
+                "--ignore=W503",
+                "--max-line-length=88",
+                "--select = B,C,E,F,W,T4,B9",
+                "--max-complexity = 18"
+        ],
+        "python.sortImports.path": "/home/roger/.local/bin/isort",
+        "python.jediEnabled": false
 }

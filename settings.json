@@ -4,12 +4,12 @@
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "editor.fontSize": 14,
-    "editor.fontFamily": "Ubuntu Mono",
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "normal",
-    "debug.console.fontFamily": "Hack NF",
+    "debug.console.fontFamily": "BlexMono Nerd Font",
     "debug.console.fontSize": 12,
-    "terminal.integrated.fontFamily": "Hack NF",
+    "terminal.integrated.fontFamily": "BlexMono Nerd Font",
     "terminal.integrated.fontWeight": "600",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",
@@ -95,7 +95,7 @@
     "editor.codeLens": false,
     "editor.acceptSuggestionOnEnter": "off",
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "flake8",
+    "python.linting.flake8Path": "/home/roger/.local/bin/flake8",
     "python.linting.flake8Args": [
         "--ignore=E203",
         "--ignore=E266",
@@ -110,4 +110,7 @@
     "window.zoomLevel": 1.2,
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "material-icon-theme",
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.blackPath": "/home/roger/.local/bin/black",
+    "python.sortImports.path": "/home/roger/.local/bin/isort",
 }
