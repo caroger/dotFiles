@@ -113,4 +113,5 @@
     "python.autoComplete.addBrackets": true,
     "python.formatting.blackPath": "/home/roger/.local/bin/black",
     "python.sortImports.path": "/home/roger/.local/bin/isort",
+    "sqltools.tableTreeItemsExpanded": true,
 }

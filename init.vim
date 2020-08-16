@@ -7,15 +7,21 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mkitt/tabline.vim'
+Plug 'edkolev/tmuxline.vim'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dadbod'
+" Plug 'itchyny/lightline.vim'
+" Plug 'bling/vim-bufferline'
 
 call plug#end()
 set timeoutlen=1000 ttimeoutlen=0
+set encoding=utf-8
 
 au BufNewFile,BufRead *.py
     \ set expandtab       |" replace tabs with spaces
@@ -23,6 +29,8 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4
     \ set softtabstop=4
     \ set shiftwidth=4
+"Python 3 host program
+let g:python3_host_prog='/usr/bin/python3'
 
 "== line number
 set nu
@@ -39,6 +47,18 @@ augroup rainbow_lisp
   autocmd!
   autocmd FileType lisp,clojure,scheme,python,vim RainbowParentheses
 augroup END
+
+
+"== display buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_powerline_fonts = 1
+
+"== Tmux status
+" let g:tmuxline_theme = 'zenburn'
+let g:tmuxline_preset = 'full'
 
 "== Run Python script with F9
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
