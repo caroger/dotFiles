@@ -7,9 +7,9 @@
     "editor.fontSize": 12,
     "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "normal",
-    "debug.console.fontFamily": "BlexMono Nerd Font",
+    "debug.console.fontFamily": "BlexMono Nerd Font Mono",
     "debug.console.fontSize": 12,
-    "terminal.integrated.fontFamily": "BlexMono Nerd Font",
+    "terminal.integrated.fontFamily": "BlexMono Nerd Font Mono",
     "terminal.integrated.fontWeight": "600",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName",

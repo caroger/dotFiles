@@ -20,8 +20,10 @@ Plug 'tpope/vim-dadbod'
 " Plug 'bling/vim-bufferline'
 
 call plug#end()
+
 set timeoutlen=1000 ttimeoutlen=0
 set encoding=utf-8
+inoremap jk <Esc>
 
 au BufNewFile,BufRead *.py
     \ set expandtab       |" replace tabs with spaces
@@ -55,7 +57,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_powerline_fonts = 1
-
+let g:airline_theme='simple'
 "== Tmux status
 " let g:tmuxline_theme = 'zenburn'
 let g:tmuxline_preset = 'full'
