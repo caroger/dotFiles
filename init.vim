@@ -102,11 +102,9 @@ augroup END
 "let g:airline_powerline_fonts = 1
 
 
-<<<<<<< HEAD
 " -----------------------------------------------------------------------------
 " Custom Keybindings 
 " -----------------------------------------------------------------------------
-=======
 "== display buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
