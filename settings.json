@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "git.autofetch": true,
   "code-runner.clearPreviousOutput": true,
   "workbench.settings.editor": "json",
@@ -62,6 +63,22 @@
     {
       "before": ["<leader>", "d"],
       "after": ["d", "d"]
+=======
+    "git.autofetch": true,
+    "code-runner.clearPreviousOutput": true,
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontWeight": "normal",
+    "debug.console.fontFamily": "BlexMono Nerd Font Mono",
+    "debug.console.fontSize": 12,
+    "terminal.integrated.fontFamily": "BlexMono Nerd Font Mono",
+    "terminal.integrated.fontWeight": "600",
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName",
+>>>>>>> c77a6f9f7ff481eefc6304c19ec70a99b2f039e5
     },
     {
       "before": ["<C-n>"],
