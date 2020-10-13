@@ -1,117 +1,108 @@
 {
-    "git.autofetch": true,
-    "code-runner.clearPreviousOutput": true,
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
-    "editor.fontSize": 12,
-    "editor.fontFamily": "Source Code Pro",
-    "editor.fontWeight": "normal",
-    "debug.console.fontFamily": "BlexMono Nerd Font",
-    "debug.console.fontSize": 12,
-    "terminal.integrated.fontFamily": "BlexMono Nerd Font",
-    "terminal.integrated.fontWeight": "600",
-    "code-runner.executorMap": {
-        "python": "$pythonPath -u $fullFileName",
+  "git.autofetch": true,
+  "code-runner.clearPreviousOutput": true,
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
+  "editor.fontSize": 12,
+  "editor.fontFamily": "Source Code Pro",
+  "editor.fontWeight": "normal",
+  "debug.console.fontFamily": "BlexMono Nerd Font",
+  "debug.console.fontSize": 12,
+  "terminal.integrated.fontFamily": "BlexMono Nerd Font",
+  "terminal.integrated.fontWeight": "600",
+  "code-runner.executorMap": {
+    "python": "$pythonPath -u $fullFileName"
+  },
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "terminal.integrated.inheritEnv": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#00BCD4",
+    "activityBar.activeBorder": "#00BCD4",
+    "list.activeSelectionForeground": "#00BCD4",
+    "list.inactiveSelectionForeground": "#00BCD4",
+    "list.highlightForeground": "#00BCD4",
+    "scrollbarSlider.activeBackground": "#00BCD450",
+    "editorSuggestWidget.highlightForeground": "#00BCD4",
+    "textLink.foreground": "#00BCD4",
+    "progressBar.background": "#00BCD4",
+    "pickerGroup.foreground": "#00BCD4",
+    "tab.activeBorder": "#00BCD4",
+    "notificationLink.foreground": "#00BCD4",
+    "editorWidget.resizeBorder": "#00BCD4",
+    "editorWidget.border": "#00BCD4",
+    "settings.modifiedItemIndicator": "#00BCD4",
+    "settings.headerForeground": "#00BCD4",
+    "panelTitle.activeBorder": "#00BCD4",
+    "breadcrumb.activeSelectionForeground": "#00BCD4",
+    "menu.selectionForeground": "#00BCD4",
+    "menubar.selectionForeground": "#00BCD4",
+    "editor.findMatchBorder": "#00BCD4",
+    "selection.background": "#00BCD440"
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "keyboard.dispatch": "keyCode",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": false,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
     },
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black",
-    "terminal.integrated.inheritEnv": true,
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 120,
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#00BCD4",
-        "activityBar.activeBorder": "#00BCD4",
-        "list.activeSelectionForeground": "#00BCD4",
-        "list.inactiveSelectionForeground": "#00BCD4",
-        "list.highlightForeground": "#00BCD4",
-        "scrollbarSlider.activeBackground": "#00BCD450",
-        "editorSuggestWidget.highlightForeground": "#00BCD4",
-        "textLink.foreground": "#00BCD4",
-        "progressBar.background": "#00BCD4",
-        "pickerGroup.foreground": "#00BCD4",
-        "tab.activeBorder": "#00BCD4",
-        "notificationLink.foreground": "#00BCD4",
-        "editorWidget.resizeBorder": "#00BCD4",
-        "editorWidget.border": "#00BCD4",
-        "settings.modifiedItemIndicator": "#00BCD4",
-        "settings.headerForeground": "#00BCD4",
-        "panelTitle.activeBorder": "#00BCD4",
-        "breadcrumb.activeSelectionForeground": "#00BCD4",
-        "menu.selectionForeground": "#00BCD4",
-        "menubar.selectionForeground": "#00BCD4",
-        "editor.findMatchBorder": "#00BCD4",
-        "selection.background": "#00BCD440"
-    },
-    "editor.multiCursorModifier": "ctrlCmd",
-    "keyboard.dispatch": "keyCode",
-    "editor.suggestOnTriggerCharacters": true,
-    "editor.parameterHints.enabled": false,
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
-    "python.linting.mypyArgs": [
-        "--follow-imports=silent",
-        "--show-column-numbers"
-    ],
-    "editor.codeLens": false,
-    "editor.acceptSuggestionOnEnter": "off",
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "/home/roger/.local/bin/flake8",
-    "python.linting.flake8Args": [
-        "--ignore=E203",
-        "--ignore=E266",
-        "--ignore=E501",
-        "--ignore=W503",
-        "--max-line-length=88",
-        "--select = B,C,E,F,W,T4,B9",
-        "--max-complexity = 18"
-    ],
-    "python.languageServer": "Microsoft",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
-    "window.zoomLevel": 1.2,
-    "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "material-icon-theme",
-    "python.autoComplete.addBrackets": true,
-    "python.formatting.blackPath": "/home/roger/.local/bin/black",
-    "python.sortImports.path": "/home/roger/.local/bin/isort",
-    "sqltools.tableTreeItemsExpanded": true,
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "python.linting.mypyArgs": [
+    "--follow-imports=silent",
+    "--show-column-numbers"
+  ],
+  "editor.codeLens": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/home/roger/.local/bin/flake8",
+  "python.linting.flake8Args": [
+    "--ignore=E203",
+    "--ignore=E266",
+    "--ignore=E501",
+    "--ignore=W503",
+    "--max-line-length=88",
+    "--select = B,C,E,F,W,T4,B9",
+    "--max-complexity = 18"
+  ],
+  "python.languageServer": "Microsoft",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "window.zoomLevel": 1.2,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "python.autoComplete.addBrackets": true,
+  "python.formatting.blackPath": "/home/roger/.local/bin/black",
+  "python.sortImports.path": "/home/roger/.local/bin/isort",
+  "sqltools.tableTreeItemsExpanded": true,
+  "C_Cpp.updateChannel": "Insiders",
+  "explorer.confirmDelete": false,
+  "ruby.format": "rufo",
+  "ruby.useLanguageServer": true,
+  "ruby.linter.run": "onType",
+  "ruby.rubocop.suppressRubocopWarnings": true
 }
