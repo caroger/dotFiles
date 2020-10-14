@@ -113,7 +113,6 @@ let g:airline_theme='simple'
 "== Tmux status
 " let g:tmuxline_theme = 'zenburn'
 let g:tmuxline_preset = 'full'
->>>>>>> c77a6f9f7ff481eefc6304c19ec70a99b2f039e5
 
 "== Run Python script with F9
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
