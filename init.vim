@@ -22,13 +22,11 @@ Plug 'tpope/vim-endwise'
 Plug 'dense-analysis/ale'
 Plug 'vim-scripts/AutoComplPop'
 call plug#end()
-<<<<<<< HEAD
-=======
+" =======
 
 set timeoutlen=1000 ttimeoutlen=0
 set encoding=utf-8
 inoremap jk <Esc>
->>>>>>> c77a6f9f7ff481eefc6304c19ec70a99b2f039e5
 
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
