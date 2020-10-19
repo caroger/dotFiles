@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -21,6 +22,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'dense-analysis/ale'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'ervandew/supertab'
 call plug#end()
 " =======
 
@@ -71,7 +73,10 @@ let &statusline = s:statusline_expr()
 
 set nu rnu	
 set ruler
-filetype plugin on 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+filetype plugin indent on
 set cursorline
 set nospell
 set spelllang=en_us
@@ -144,6 +149,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \   'python': ['black', 'isort'],
+\   'html': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 
