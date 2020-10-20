@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="/home/roger/.oh-my-zsh"
+export ZSH="$HOME/Apps/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -96,9 +96,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=039'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="nvim $ZDOTDIR/.zshrc"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias lc='colorls -l --sd'
 
 # >>> conda initialize >>>
