@@ -114,6 +114,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 # Custom shortcuts
 bindkey '^ ' autosuggest-accept
