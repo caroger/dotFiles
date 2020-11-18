@@ -78,7 +78,7 @@ bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim $ZDOTDIR/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
 alias lc='colorls -l --sd'
 
