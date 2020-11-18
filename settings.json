@@ -1,24 +1,39 @@
 {
-    "vim.cursorStylePerMode.insert": "line",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.easymotion": true,
+    "window.zoomLevel": 1,
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.editor": "json",
     "keyboard.dispatch": "keyCode",
     "workbench.iconTheme": "vscode-great-icons",
-    "workbench.colorTheme": "One Monokai",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.lineNumbers": "on",
+    "editor.formatOnType": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "monospace",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
     "explorer.confirmDelete": false,
+    "editor.rulers": [
+        80
+    ],
     "vim.useSystemClipboard": true,
-    "python.languageServer": "Microsoft",
+    // python settings
+    "python.analysis.autoImportCompletions": false,
+    "python.languageServer": "Pylance",
+    "python.pythonPath": "/usr/bin/python3",
     "python.defaultInterpreterPath": "/usr/bin/python3",
-    "python.sortImports.path": "/home/roger/.local/bin/isort",
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/home/roger/.local/bin/black",
+    "python.formatting.blackPath": "~/.local/bin/black",
+    "python.sortImports.path": "~/.local/bin/isort",
+    "python.linting.enabled": false,
+    "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "/home/roger/.local/bin/flake8",
+    "python.linting.flake8Path": "~/.local/bin/flake8",
     "python.linting.flake8Args": [
         "--ignore=E203",
         "--ignore=E266",
@@ -28,20 +43,8 @@
         "--select = B,C,E,F,W,T4,B9",
         "--max-complexity = 18"
     ],
-    "[ruby]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-    "python.linting.pylintEnabled": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.intellisense": "rubyLocate",
-    "ruby.useLanguageServer": true,
-    "ruby.format": "rubyfmt",
-    "ruby.linter.run": "onSave",
-    "ruby.linter.executablePath": "ruby",
-    "editor.multiCursorModifier": "ctrlCmd",
+    "python.analysis.completeFunctionParens": true,
+    // git settings
     "git.confirmSync": false,
     "editor.suggestSelection": "first",
     "files.exclude": {
@@ -50,14 +53,35 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "terminal.integrated.shell.linux": "/bin/zsh",
     "git.enableSmartCommit": true,
     "clock.alignment": "Right",
-    "terminal.integrated.inheritEnv": false,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.tabCompletion": "on",
     "editor.suggest.localityBonus": true,
-    "python.pythonPath": "/usr/bin/python3",
-    "python.linting.enabled": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // leetcode settings
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.setDefaultLanguage": false,
+    "leetcode.showLocked": true,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.workspaceFolder": "/home/roger/.leetcode",
+    // App Academy Specific
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "jsx": "html"
+    },
+    "workbench.editor.showTabs": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "breadcrumbs.enabled": true,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
 }
