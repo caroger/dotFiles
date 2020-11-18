@@ -22,6 +22,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'ervandew/supertab'
 call plug#end()
 " =======
 
@@ -56,7 +57,6 @@ set encoding=utf-8
 inoremap jk <Esc>
 set nu rnu
 set ruler
-filetype plugin on
 set cursorline
 set nospell
 set spelllang=en_us

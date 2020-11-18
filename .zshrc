@@ -78,9 +78,8 @@ bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="nvim $ZDOTDIR/.zshrc"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias lc='colorls -l --sd'
 
 # >>> conda initialize >>>
@@ -97,6 +96,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 # Custom shortcuts
 bindkey ';' autosuggest-accept
