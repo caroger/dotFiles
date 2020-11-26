@@ -8,6 +8,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export ZSH="/home/roger/.oh-my-zsh"
 export TERM="xterm-256color"
+export FZF_BASE="/usr/bin/fzf"
 eval "$(rbenv init -)"
 # Themes
 ZSH_THEME="awesomepanda"
