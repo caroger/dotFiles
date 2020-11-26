@@ -7,6 +7,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export ZSH="/home/roger/.oh-my-zsh"
+export TERM="xterm-256color"
 eval "$(rbenv init -)"
 # Themes
 ZSH_THEME="awesomepanda"
@@ -80,7 +81,9 @@ bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
+alias tmuxconfig="nvim ~/.tmux.conf"
 alias lc='colorls -l --sd'
+alias ber="bundle exec rspec"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
