@@ -54,3 +54,4 @@ alias lc='colorls -l --sd'
 alias ber="bundle exec rspec"
 alias be='bundle exec'
 alias bi="bundle install"
+alias c='clear'
