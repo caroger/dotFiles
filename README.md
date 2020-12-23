@@ -1,7 +1,6 @@
 # dotFiles
 
-This fold stores the configuration files for VS Code and Vim for the ease of using and updating the same configurations across different desktops.
-
+Remaking dotFiles Repo
 ---
 
 ## VS Code User Configg
